@@ -1,0 +1,133 @@
+{
+  "layers": {
+    "layer": [
+      {
+        "name": "Overhead Structure",
+        "url": "https://sdgegisportal.sempra.com/maps2/rest/services/ElecWeb/Electric_Asset_Structure_ElecWeb_v3/MapServer",
+        "id": 12,
+        "Relationships": {
+          "id": 24,
+          "name": "Work History",
+          "relatedTableId": 23,
+          "role": "esriRelRoleDestination",
+          "keyField": "WOGUID",
+          "cardinality": "esriRelCardinalityManyToMany",
+          "composite": false
+        },
+        "SelectFieldNames": [
+          "WORKORDERNUM"
+        ],
+        "fields": {
+          "all": false,
+          "field": [
+            {
+              "name": "WORKORDERNUM",
+              "alias": "Work Order Number",
+              "archibusparam": "work_order"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Surface Structure",
+        "url": "https://sdgegisportal.sempra.com/maps2/rest/services/ElecWeb/Electric_Asset_Structure_ElecWeb_v3/MapServer",
+        "id": 13,
+        "Relationships": {
+          "id": 25,
+          "name": "Work History",
+          "relatedTableId": 24,
+          "role": "esriRelRoleDestination",
+          "keyField": "WOGUID",
+          "cardinality": "esriRelCardinalityManyToMany",
+          "composite": false
+        },
+        "SelectFieldNames": [
+          "WORKORDERNUM"
+        ],
+        "fields": {
+          "all": false,
+          "field": [
+            {
+              "name": "WORKORDERNUM",
+              "alias": "Work Order Number",
+              "archibusparam": "work_order"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Underground Structure",
+        "url": "https://sdgegisportal.sempra.com/maps2/rest/services/ElecWeb/Electric_Asset_Structure_ElecWeb_v3/MapServer",
+        "id": 14,
+        "Relationships": {
+          "id": 26,
+          "name": "Work History",
+          "relatedTableId": 25,
+          "role": "esriRelRoleDestination",
+          "keyField": "WOGUID",
+          "cardinality": "esriRelCardinalityManyToMany",
+          "composite": false
+        },
+        "SelectFieldNames": [
+          "WORKORDERNUM"
+        ],
+        "fields": {
+          "all": false,
+          "field": [
+            {
+              "name": "WORKORDERNUM",
+              "alias": "Work Order Number",
+              "archibusparam": "work_order"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Parcel",
+        "url": "https://gismaps.sempra.com/arcgis/rest/services/Land_Env/Parcels/MapServer",
+        "id": 0,
+        "Relationships": null,
+        "SelectFieldNames": [
+          "ONLINE_FORMAT_PARCEL_ID"
+        ],
+        "fields": {
+          "all": false,
+          "field": [
+            {
+              "name": "ONLINE_FORMAT_PARCEL_ID",
+              "alias": "ONLINE_FORMAT_PARCEL_ID",
+              "archibusparam": "assessor_map"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Easement ROW",
+        "url": "https://sdgegisportal.sempra.com/maps2/rest/services/Land_Env/SDGE_Features/MapServer",
+        "id": 0,
+        "Relationships": null,
+        "SelectFieldNames": [
+          "ROWNO",
+          "SKETCHNO"
+        ],
+        "fields": {
+          "all": false,
+          "field": [
+            {
+              "name": "ROWNO",
+              "alias": "Row Number",
+              "archibusparam": "easement"
+            },
+            {
+              "name": "SKETCHNO",
+              "alias": "Sketch Number",
+              "archibusparam": "survey_sketch"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "WebServiceURL": "https://sdge.fmpca.com/sso/link",
+  "ViewName": "land-gis-document-viewer_fmp.axvw&type=gis"
+}
